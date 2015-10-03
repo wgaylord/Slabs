@@ -1,4 +1,4 @@
-package chibill.slabs.slabs;
+package chibill.slabs;
 
 import org.bukkit.Material;
 import org.bukkit.event.EventHandler;

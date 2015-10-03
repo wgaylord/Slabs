@@ -10,7 +10,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import chibill.slabs.slabs.SlabEventHandler;
+import chibill.slabs.SlabEventHandler;
 
 
 
