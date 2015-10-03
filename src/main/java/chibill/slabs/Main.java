@@ -13,7 +13,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import chibill.slabs.SlabEventHandler;
 
 
-
+//Not safe untested
 
 public class Main extends JavaPlugin {
 
