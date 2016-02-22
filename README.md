@@ -1,2 +1,2 @@
-# Slabs [![Build Status](http://minecraft16.us.to/jenkins/buildStatus/icon?job=Slabs)](Http://minecraft16.us.to/jenkins/job/Slabs)
+# Slabs [![Build Status](https://minecraft16.ml/jenkins/buildStatus/icon?job=Slabs)](https://minecraft16.ml/jenkins/job/Slabs)
 A plugin to allow you to place upside down half slabs.
