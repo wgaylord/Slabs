@@ -1,35 +1,24 @@
 package chibill.slabs.slabs;
 
-import org.bukkit.block.Block;
-import org.bukkit.enchantments.Enchantment;
+import org.bukkit.Material;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockPlaceEvent;
 
-import chibill.slabs.Main;
-
 public class SlabEventHandler  implements Listener {
-
-
 	
-	public SlabEventHandler() {
-		
-	}
-
+	
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent event){
-		if(Main.isSlab(event.getBlockPlaced().getState().getData())){
-			if((event.getItemInHand().getEnchantmentLevel(Enchantment.DURABILITY)==1) && (event.getItemInHand().getItemMeta().getDisplayName() == "Upside down slab")){
-				SetInverted(event.getBlockPlaced());
-			}
+		
+		if(event.getBlock().getType().equals(Material.STEP) | event.getBlock().getType().equals(Material.WOOD_STEP) | event.getBlock().getType().equals(Material.STONE_SLAB2)| event.getBlock().getType().equals(Material.PURPUR_SLAB)){
+			
+			if((event.getItemInHand().getItemMeta().getDisplayName().hashCode() == "Upside down slab".hashCode())){
+				if(event.getBlockReplacedState().getType() != event.getBlockPlaced().getType()){
+				event.getBlock().getState().getBlock().setData((byte)(event.getItemInHand().getData().getData()+ 8));
+			}}
 		}
 		
-	}
-	
-	public void SetInverted(Block b){
-		int dat = b.getData() & 0x7;
-		dat |= 8;
-		b.setData((byte) dat);
 	}
 	
 }
