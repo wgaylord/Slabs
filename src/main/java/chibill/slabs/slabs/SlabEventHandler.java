@@ -17,7 +17,7 @@ public class SlabEventHandler  implements Listener {
 				if(event.getBlockReplacedState().getType() != event.getBlockPlaced().getType()){
 				event.getBlock().getState().getBlock().setData((byte)(event.getItemInHand().getData().getData()+ 8));
 			}}
-		}catch(Exception e){}
+		}}catch(Exception e){}
 		
 	}
 	
