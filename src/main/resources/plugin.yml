@@ -1,6 +1,6 @@
 name: Slabs
 main: chibill.slabs.Main
-version: 2.0.0
+version: 2.2.0
 
 commands:
   slab:
