@@ -8,3 +8,8 @@ commands:
     usage: /<command>
     permission: Slabs.slab
     permission-message: You don't have permission!
+  slab-version:
+    description: Reports the version of Slabs installed.
+    usage: /<command>
+    permission: Slabs.version
+    permission-message: You don't have permission!
