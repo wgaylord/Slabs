@@ -39,7 +39,7 @@ public class Main extends JavaPlugin {
 		if(cmd.getName().equalsIgnoreCase("slab")){
 			if((sender instanceof Player)){
 			ItemStack item = ((Player) sender).getItemInHand();
-			if(isSlab(item.getData()) && sender.hasPermission("Slab.slab.creative")){
+			if(isSlab(item.getData())){
 				((Player) sender).getInventory().remove(item);
 				ItemMeta meta = item.getItemMeta();
 				meta.setDisplayName("Upside Down Slab");
@@ -48,7 +48,7 @@ public class Main extends JavaPlugin {
 				((Player) sender).getInventory().addItem(item);
 				sender.sendMessage("Your requested slab is now in your hand");
 			}else{
-				if(((Player) sender).getGameMode() != GameMode.SURVIVAL && sender.hasPermission("Slab.slab.creative")){
+				if(((Player) sender).getGameMode() != GameMode.SURVIVAL){
 				ItemStack item1 = new ItemStack(Material.STEP);
 				ItemMeta meta = item1.getItemMeta();
 				meta.setDisplayName("Upside Down Slab");
@@ -56,7 +56,7 @@ public class Main extends JavaPlugin {
 				item1.setItemMeta(meta);
 				((Player) sender).getInventory().addItem(item1);
 				sender.sendMessage("Your requested slab has been added inventory.");
-				}else{if(sender.hasPermission("Slab.slab.survival")){
+				}else{if(sender.hasPermission("Slab.survival")){
 					sender.sendMessage("You must have a slab in your hand to get an Upside Down salb in Survival");
 				}}}
 			}else{
