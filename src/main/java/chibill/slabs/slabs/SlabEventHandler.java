@@ -19,7 +19,7 @@ public class SlabEventHandler  implements Listener {
 	@EventHandler
 	public void onBlockPlace(BlockPlaceEvent event){
 		if(Main.isSlab(event.getBlockPlaced().getState().getData())){
-			if((event.getItemInHand().getEnchantmentLevel(Enchantment.DURABILITY)==1) && (event.getItemInHand().getItemMeta().getDisplayName() == "Upside down slab")){
+			if( (event.getItemInHand().getItemMeta().getDisplayName().equals("Upside Down Slab"))){
 				SetInverted(event.getBlockPlaced());
 			}
 		}
@@ -30,6 +30,7 @@ public class SlabEventHandler  implements Listener {
 		int dat = b.getData() & 0x7;
 		dat |= 8;
 		b.setData((byte) dat);
+		b.getState().update();
 	}
 	
 }
