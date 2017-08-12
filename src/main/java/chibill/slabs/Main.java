@@ -74,12 +74,12 @@ public class Main extends JavaPlugin {
 				try{
 					mat.getClass().getMethod("getFacing", null); //weeds the stairs out
 				}catch(NoSuchMethodException e){
-					System.out.println(e.getMessage());
+					//System.out.println(e.getMessage());
 					// Tells us it is slab and not a stair
 					return true;
 				}
 			}catch(NoSuchMethodException e){
-				System.out.println(e.getMessage());
+				//System.out.println(e.getMessage());
 			}
 		return false;
 	}
